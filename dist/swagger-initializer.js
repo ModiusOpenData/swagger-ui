@@ -1,3 +1,13 @@
+const ModiusLogoPlugin = {
+    components: {
+        Logo: () => React.createElement('img', {
+            alt: "Modius Logo",
+            height: "40",
+            src: "modius-logo-transparent.png"
+        })
+    }
+};
+
 window.onload = function() {
   //<editor-fold desc="Changeable Configuration Block">
 
@@ -11,7 +21,8 @@ window.onload = function() {
       SwaggerUIStandalonePreset
     ],
     plugins: [
-      SwaggerUIBundle.plugins.DownloadUrl
+      SwaggerUIBundle.plugins.DownloadUrl,
+      ModiusLogoPlugin
     ],
     layout: "StandaloneLayout"
   });
