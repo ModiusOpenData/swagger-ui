@@ -1,12 +1,13 @@
-const ModiusLogoPlugin = {
+// Uses the React that Swagger UI passes to plugins, so the page loads no outside script.
+const ModiusLogoPlugin = (system) => ({
     components: {
-        Logo: () => React.createElement('img', {
+        Logo: () => system.React.createElement('img', {
             alt: "Modius Logo",
             height: "40",
             src: "modius-logo-transparent.png"
         })
     }
-};
+});
 
 window.onload = function() {
   //<editor-fold desc="Changeable Configuration Block">
